@@ -1,6 +1,6 @@
 {
-  "appId": "com.fatec.kioferta",
-  "appName": "ki-oferta",
+  "appId": "com.etec.kioferta",
+  "appName": "kioferta",
   "webDir": "dist",
   "plugins": {
     "SplashScreen": {
