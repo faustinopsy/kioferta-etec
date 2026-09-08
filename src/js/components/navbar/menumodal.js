@@ -3,7 +3,10 @@ function menuModal(){
     <div id="modal">
         <ul id="menu-lateral">
             <li>
-                <a href="">Home</a>
+                <a href="">Minha Conta</a>
+            </li>
+            <li>
+                <a href="">Minhas Contribuições</a>
             </li>
         </ul>
     </div>
