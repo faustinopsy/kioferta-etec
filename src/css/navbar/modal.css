@@ -9,3 +9,8 @@
     background-color: burlywood;
     transition: all 2s;
 }
+#menu-lateral{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
