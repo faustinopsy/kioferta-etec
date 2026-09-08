@@ -1,32 +1,26 @@
-import navbar from "./navbar/navbar.js";
-import roteador from "./rotas/rotas.js";
+import {renderNavbar} from "./components/navbar/navbar.js";
+import {rotas} from "./components/rotas/rotas.js";
+import { createIcons, icons } from 'lucide';
 
-const ROTA_PADRAO = '#home';
 
-const app = document.getElementById('app');
-const mapaDeRotas = criarMapaDeRotas(roteador);
-const paginaNaoEncontrada = {
-    pagina: (app) => { app.innerHTML = '<div>Página não encontrada 404</div>'; }
-};
+renderNavbar(rotas);
 
-function criarMapaDeRotas(rotas) {
-    const mapa = {};
-    for (const rota of rotas) {
-        mapa[rota.url] = rota;
+
+const app = document.querySelector("#app")
+
+
+function renderAPP(){
+    const hash = window.location.hash || "#busca"
+    const rota = rotas.find(tela => tela.url === hash)
+    console.log(rota)
+    if(rota){
+        rota.pagina(app)
+        createIcons({ icons });
+    }else{
+        app.innerHTML = "página não encontrada"
     }
-    return mapa;
 }
 
-async function renderizarRotaAtual() {
-    const hash = window.location.hash || ROTA_PADRAO;
-    const rota = mapaDeRotas[hash] || paginaNaoEncontrada;
-    await rota.pagina(app);
-}
+window.addEventListener("hashchange", renderAPP)
 
-function iniciar() {
-    navbar(roteador);
-    renderizarRotaAtual();
-    window.addEventListener('hashchange', renderizarRotaAtual);
-}
-
-iniciar();
+renderAPP()
