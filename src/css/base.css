@@ -14,3 +14,9 @@ a{
   text-decoration: none;
   
 }
+body{
+  max-width: 440px;
+  margin: 0 auto;
+  border: 1px solid grey;
+  height: 100dvh;
+}

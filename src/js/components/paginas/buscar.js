@@ -4,6 +4,7 @@ function buscar(app){
             <h2>Radar de Promoções</h2>
             <p class="subtitulo-buscar"> O que Você quer Comprar mais barato?</p>
             <div class="grupo-input">
+            <i data-lucide="search" id="icone-busca"></i> 
                 <input 
                     type="text" 
                     id="input-busca" 
@@ -13,27 +14,28 @@ function buscar(app){
                 <button id="btn-busca"> 
                     <i data-lucide="arrow-right"></i>
                 </button>
+                
             </div>
-
+            <p class="busca-atencao">Preços da semana de 10 a 16 de agosto, enviado por que mestá no mercado</p>
             <div class="categorias-busca">
                 <p>Categoria</p>
                 <ul class="categoria-lista">
-                    <li>
+                    <li class="lista-categoria">
                         Mercearia
                     </li>
-                    <li>
+                    <li class="lista-categoria">
                         Carnes
                     </li>
-                    <li>
+                    <li class="lista-categoria">
                         Hortifrúti
                     </li>
-                    <li>
+                    <li class="lista-categoria">
                         Bebidas
                     </li>
-                    <li>
+                    <li class="lista-categoria">
                         Limpeza
                     </li>
-                    <li>
+                    <li class="lista-categoria">
                         Higiene
                     </li>
                 </ul>

@@ -6,9 +6,9 @@
     gap: 12%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width:440px;
     height: 60px;
-    background-color: var(--cor-secundaria);
+    border-top: 1px solid #b4b4b4;
 }
 
 .nav-icon{
@@ -16,7 +16,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: var(--cor-terciaria);
+    color: #5a5959;
+    padding-bottom: 15px;
+}
+
+.nav-icon:hover{
+    border-top: 2px solid blue;
 }
 
 .menu-ham{
