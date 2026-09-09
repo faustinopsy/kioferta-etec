@@ -1,3 +1,4 @@
+import produtos from './produtos.js'
 function buscar(app){
     app.innerHTML = `
         <div class="container-buscar">
@@ -44,7 +45,19 @@ function buscar(app){
         </div>
 
     `
+    adicionarEvento(app)
+}
 
+function adicionarEvento(app){
+    const botaoBusca = document.getElementById("btn-busca")
+    const listaCategoria = document.querySelectorAll(".lista-categoria")
+    botaoBusca.addEventListener("click",()=>{
+       produtos.pagina(app)
+    })
+
+    listaCategoria.forEach(item => item.addEventListener("click", ()=>{
+        produtos.pagina(app)
+    }))
 }
 
 export default {
