@@ -4,7 +4,7 @@ function buscar(app){
             <h2>Radar de Promoções</h2>
             <p class="subtitulo-buscar"> O que Você quer Comprar mais barato?</p>
             <div class="grupo-input">
-            <i data-lucide="search" id="icone-busca"></i> 
+            <label for="input-busca"><i data-lucide="search" id="icone-busca"></i> </label>
                 <input 
                     type="text" 
                     id="input-busca" 
