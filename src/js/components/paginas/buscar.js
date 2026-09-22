@@ -1,68 +1,53 @@
-import produtos from './produtos.js'
 function buscar(app){
     app.innerHTML = `
         <div class="container-buscar">
-            <h2>Radar de Promoções</h2>
-            <p class="subtitulo-buscar"> O que Você quer Comprar mais barato?</p>
+            <h2> Radar de Promoções</h2>
+            <p class="subtitulo-buscar"> O que você quer comprar mais barato?</p>
             <div class="grupo-input">
-            <label for="input-busca"><i data-lucide="search" id="icone-busca"></i> </label>
-                <input 
-                    type="text" 
-                    id="input-busca" 
-                    placeholder="Produto ou marca"
-                    aria-label="campo busca de produto"
+                <input
+                type="text"
+                id="input-busca"
+                placeholder="Produto ou marca"
+                aria-label="campo busca de produto"
                 >
-                <button id="btn-busca"> 
+                <buttom id="btn-busca">
                     <i data-lucide="arrow-right"></i>
-                </button>
-                
+                </buttom>
+            
             </div>
-            <p class="busca-atencao">Preços da semana de 10 a 16 de agosto, enviado por que mestá no mercado</p>
+        
             <div class="categorias-busca">
-                <p>Categoria</p>
+                <p> Categoria</p>
                 <ul class="categoria-lista">
-                    <li class="lista-categoria">
-                        Mercearia
+                    <li class="categoria-item">
+                        <a href="#mercearia">Mercearia</a>
                     </li>
-                    <li class="lista-categoria">
-                        Carnes
+                    <li class="categoria-item">
+                        <a href="#carnes">Carnes</a>
                     </li>
-                    <li class="lista-categoria">
-                        Hortifrúti
+                    <li class="categoria-item">
+                        <a href="#hortifruti">Hortifruti</a>
                     </li>
-                    <li class="lista-categoria">
-                        Bebidas
+                    <li class="categoria-item">
+                        <a href="#bebidas">Bebidas</a>
                     </li>
-                    <li class="lista-categoria">
-                        Limpeza
+                    <li class="categoria-item">
+                        <a href="#limpeza">Limpeza</a>
                     </li>
-                    <li class="lista-categoria">
-                        Higiene
+                    <li class="categoria-item">
+                        <a href="#higiene">Higiene</a>
                     </li>
                 </ul>
             </div>
 
-        </div>
-
+        
+            </div>
     `
-    adicionarEvento(app)
-}
-
-function adicionarEvento(app){
-    const botaoBusca = document.getElementById("btn-busca")
-    const listaCategoria = document.querySelectorAll(".lista-categoria")
-    botaoBusca.addEventListener("click",()=>{
-       produtos.pagina(app)
-    })
-
-    listaCategoria.forEach(item => item.addEventListener("click", ()=>{
-        produtos.pagina(app)
-    }))
 }
 
 export default {
     url: "#buscar",
-    label: "buscar",
+    label: "Buscar",
     icon: "search",
     pagina: buscar
 }

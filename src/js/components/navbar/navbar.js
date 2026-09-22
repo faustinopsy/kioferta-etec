@@ -1,15 +1,26 @@
-function renderNavbar(rotas) {
-    const nav = document.querySelector("#navbar");
+import { Menu } from "lucide"
 
+function renderNavbar(rotas){
+    const nav = document.querySelector("#navbar")
     nav.innerHTML = `
-        <nav>
-            <ul class="navbar-bottom">
-                ${
-                    rotas.filter(menu => menu.label !== "").map((menu) => `<li><a href="${menu.url}" class="nav-icon"> <i data-lucide="${menu.icon}"></i>${menu.label}</a></li>`).join("")
-                }
-            </ul>
-        </nav>
-    `;
-}
+    <nav>
+        <ul class="navbar-bottom">
+            ${
+                rotas.filter(Menu => Menu.label !=="").map((Menu) => 
+                    `<li>
+                        <a href="${Menu.url}" class="nav-icon"> 
+                        <i data-lucide="${Menu.icon}"></i>
+                        ${Menu.label} </a></li>`) 
+            .join("")
+            }
 
-export { renderNavbar };
+            <li>
+                <a href="#menu" class="nav-icon">     
+            </li>
+        </ul>
+            <i data-lucide="menu" class="menu-ham"></i> 
+    </nav>
+    `
+} 
+
+export {renderNavbar}

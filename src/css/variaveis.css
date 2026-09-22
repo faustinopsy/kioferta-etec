@@ -1,7 +1,5 @@
 :root{
-    --cor-primaria: #ff0000;
-    --cor-secundaria: #fff;
-    --cor-terciaria: #000;
-
-
+    --cor-primaria: #FFDBBB;
+    --cor-secundaria: rgb(77, 53, 23);
+    --cor-terciaria: #ff0000;
 }
